@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 50-->
+
+<head>
+    <title>Practica 50</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var money = [];
+        var pc;
+        var f;
+        do {
+            pc = prompt('Ingresar su sueldo (Nota: ingrese 0 para finalizar el programa.))', '');
+            pc = parseInt(pc);
+            if (pc != 0)
+                money.push(pc);
+        } while (pc != 0);
+        money.sort(function(x, y) {
+            if (x > y)
+                return 1;
+            else
+                return -1;
+        });
+        document.write('Estos sueldos estan ordenados de menor a mayor:');
+        document.write('<br>');
+        for (f = 0; f < money.length; f++) {
+            document.write('<br>');
+            document.write(money[f]);
+        }
+        money.reverse();
+        document.write('<br>');
+        document.write('Estos sueldos estan ordenados de mayor a menor:');
+        document.write('<br>');
+        for (f = 0; f < money.length; f++) {
+            document.write('<br>');
+            document.write(money[f]);
+        }
+    </script>
+
+</body>
+
+</html>
